@@ -1,6 +1,12 @@
+packages:
+  - packages/element-picker
+
 onlyBuiltDependencies:
   - esbuild
   - protobufjs
+
+overrides:
+  '@apad/element-picker': link:packages/element-picker
 
 patchedDependencies:
   '@rc-component/util': patches/@rc-component__util.patch

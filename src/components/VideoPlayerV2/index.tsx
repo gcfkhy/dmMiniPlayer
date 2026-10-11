@@ -447,13 +447,13 @@ const VideoPlayerV2Inner = observer(
             <Toast />
           </div>
 
-          <div className="absolute bottom-[calc(100%+12px)] w-full pointer-events-none">
+          <div className="vp-subtitle-container absolute bottom-[calc(100%+12px)] w-full pointer-events-none">
             <SubtitleText subtitleManager={subtitleManager} />
           </div>
 
           {!isLive && <PlayerProgressBar />}
 
-          <div className="opacity-0 group-[&.active]:opacity-100 transition-all duration-500">
+          <div className="group-[&.active]:!opacity-100 opacity-0 transition-all duration-500">
             <div className="mask w-full h-[calc(var(--area-height)+10px)] absolute bottom-0 bg-gradient-to-t from-[#000] opacity-70 z-[1]"></div>
             <div className="actions text-white px-5 py-2 f-i-center relative z-[6] gap-3 h-area-height">
               {configStore.bp_preVideo && (
